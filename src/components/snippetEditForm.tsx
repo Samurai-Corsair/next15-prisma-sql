@@ -3,7 +3,7 @@
 import type { Snippet } from "@prisma/client";
 import { Editor } from "@monaco-editor/react";
 import { useState } from "react";
-import * as actions from "@/actions";
+import * as actions from "../app/actions";
 
 interface SnippetEditFormProps {
   snippet: Snippet;

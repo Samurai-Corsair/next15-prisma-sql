@@ -1,7 +1,7 @@
 import { db } from "@/db";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import * as actions from "@/actions/index";
+import * as actions from "@/app/actions/index";
 
 interface SnippetShowPageProps {
   params: Promise<{
