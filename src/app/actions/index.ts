@@ -57,5 +57,6 @@ export async function createSnippet(
       };
     }
   }
+  revalidatePath("/");
   redirect("/");
 }
