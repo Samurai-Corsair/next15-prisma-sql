@@ -1,10 +1,12 @@
-'use client';
+"use client";
 //import { useActionState } from "react"; // <--React 19
 import { useFormState } from "react-dom";
 import * as actions from "../../actions";
 
 export default function SnippetCreatePage() {
-  const [formState, action] = useFormState(actions.createSnippet, { message: "" });
+  const [formState, action] = useFormState(actions.createSnippet, {
+    message: "",
+  });
   return (
     <form action={action}>
       <h3 className="font-bold m-3">Create a snippet</h3>
@@ -29,7 +31,11 @@ export default function SnippetCreatePage() {
             id="code"
           />
         </div>
-        {formState.message && <div className="my-2 p-2 bg-red-200 border rounded border-red-400">{formState.message}</div>}
+        {formState.message && (
+          <div className="my-2 p-2 bg-red-200 border rounded border-red-400">
+            {formState.message}
+          </div>
+        )}
         <button type="submit" className="border rounded p-2 bg-blue-200">
           Create
         </button>
